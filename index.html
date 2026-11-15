@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#102343">
+  <meta name="description" content="Matematikværkstedet til 5.D: 56 spil fordelt på 13 MULTI-kapitler og et ekstra metodeværksted, tre niveauer, matematikhjælper og faglig læsning.">
+  <title>Matematikværkstedet · 5.D</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="gamebank.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Gå til indholdet</a>
+  <header class="site-head">
+    <div class="wrap nav">
+      <button type="button" id="home-btn" class="brand" aria-label="Gå til forside">
+        <span class="brand-symbol" aria-hidden="true">5<span>·</span>D</span>
+        <span class="brand-words"><strong>Matematikværkstedet</strong><small>Træn, prøv og bliv klogere</small></span>
+      </button>
+      <div class="nav-actions">
+        <button type="button" class="nav-btn speech-toggle" id="speech-toggle" aria-pressed="false" title="Slå automatisk oplæsning til eller fra">🔈 Automatisk oplæsning: Fra</button>
+        <button type="button" class="nav-btn" id="teacher-btn">Til voksne</button>
+        <button type="button" class="nav-btn nav-btn-bright" id="nav-helper" aria-label="Åbn matematikhjælperen">✦ <span class="helper-label-full">Matematikhjælper</span><span class="helper-label-short">Hjælp</span></button>
+      </div>
+    </div>
+  </header>
+  <main id="main" class="wrap" tabindex="-1"></main>
+  <footer class="footer"><div class="wrap footer-grid"><span><b>Matematikværkstedet · 5.D</b> <span class="footer-dot">•</span> Øv lidt ad gangen. Tænk over metoden.</span><span>Selvstændige opgaver inspireret af fagområderne i MULTI 5, ikke en officiel Gyldendal-udgivelse.</span></div></footer>
+  <dialog id="helper-dialog" class="helper-dialog" aria-labelledby="helper-heading">
+    <div class="dialog-head"><div class="helper-identity"><img class="helper-face" src="assets/matematikhjaelper.webp" alt=""><div><strong id="helper-heading">Din matematikhjælper</strong><small>Et råd ad gangen</small></div></div><button type="button" class="close-icon" id="close-helper" aria-label="Luk matematikhjælperen">✕</button></div>
+    <div id="helper-content" class="helper-body"></div>
+  </dialog>
+  <dialog id="teacher-dialog" class="teacher-dialog" aria-labelledby="teacher-heading"><div class="dialog-head"><strong id="teacher-heading">Til lærere og forældre</strong><button type="button" class="close-icon" id="close-teacher" aria-label="Luk information">✕</button></div>
+    <div class="teacher-text">
+      <h3>Sådan bruger I Matematikværkstedet</h3>
+      <p>Vælg et af MULTI 5’s 13 kapitler eller det ekstra værksted om regneregler og regnemetoder. Vælg derefter et af de fire spil. Hvert spil har tre niveauer: <b>Kom i gang</b>, <b>Øv videre</b> og <b>Udfordring</b>. Eleven får et læringsmål før start, løbende tilbagemeldinger og en opsamling efter syv spørgsmål.</p>
+      <p>Ved et forkert svar gives først et konkret tip og mulighed for at prøve igen. Efter endnu et forkert svar vises en forklaring. Matematikhjælperen kan give et fagligt råd eller et regneeksempel uden at oplyse facit til den aktuelle opgave.</p>
+      <p><b>Oplæsning:</b> Eleverne kan vælge »Læs højt« ved opgaver, fagtekster og forklaringer eller slå automatisk oplæsning til. Det kræver, at browseren understøtter tale. Oplæsningen benytter browserens stemme og kan afbrydes ved at navigere videre.</p>
+      <p><b>Faglig læsning:</b> Kapitel 1 arbejder specifikt med betydningen af ord som <em>kongruent, omkreds, sum</em> og <em>kvotient</em>, og med at udvælge oplysninger og planlægge en løsning. Den korte læsetekst kan bruges før spillene.</p>
+      <p><b>Databeskyttelse:</b> Spilfremskridt gemmes kun lokalt i den aktuelle browsers lager. Der oprettes ingen elevkonti, sendes ingen svar til en server, og navne skal ikke indtastes. Fremgang på en delt computer er ikke knyttet til en bestemt elev.</p>
+      <p>Materialet er en selvstændig træningsressource, struktureret efter kapitlerne i MULTI 5. Opgaver og illustrationer er nyproducerede og ikke gengivet fra grundbogen.</p>
+      <button type="button" id="clear-progress" class="danger-lite">Nulstil lokal øvehistorik</button>
+      <p class="footnote">Brug sidens resultater som støtte til samtale om strategier, ikke som en standardiseret test.</p>
+    </div>
+  </dialog>
+</body>
+</html>
